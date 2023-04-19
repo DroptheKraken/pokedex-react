@@ -10,7 +10,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "homepage":"https://github.com/DroptheKraken/pokedex-react"
+    "homepage":"https://dropthekraken.github.io/pokedex-react/"
   },
   "scripts": {
     "predeploy": "npm run build",
