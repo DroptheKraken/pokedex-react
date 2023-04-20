@@ -39,6 +39,8 @@ function App() {
 
   return (
     <div className="app-container">
+          
+ 
       <h1>Pokedex RE</h1><small>Andy & Alex</small>
       <div className="pokemon-container">
         <div className="all-container">
@@ -54,6 +56,8 @@ function App() {
         {nextUrl && <button className="load-more" onClick={handleNextPage}>Next Page</button>}
       </div>
     </div>
+
+    
   );
 }
 
