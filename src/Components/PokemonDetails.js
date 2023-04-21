@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../PokemonDetails.css';
 
-export const PokemonDetails = () => {
+ const PokemonDetails = () => {
   const { pokemonName } = useParams();
   const [pokemon, setPokemon] = useState(null);
 
@@ -41,4 +41,6 @@ export const PokemonDetails = () => {
       </div>
     </div>
   );
+  
 };
+export default PokemonDetails;

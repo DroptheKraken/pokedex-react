@@ -2,32 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import PokemonDetails from './Components/PokemonDetails';
 import reportWebVitals from './reportWebVitals';
-import Root from './Routes/Root';
 import { RouterProvider } from 'react-router-dom';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import { PokemonDetails } from './Components/PokemonDetails';
+import Root from './Routes/Root';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
-const router = (
-  <Router>
-    <Root>
-      <Switch>
-        <Route exact path="/" component={App} />
-        <Route path="/pokemon/:pokemonName" component={PokemonDetails} />
-      </Switch>
-    </Root>
-  </Router>
-);
+let router;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+ router = (
+  <HashRouter>
+  <Routes>
+    <Route path="/" element={<App />} />
+    <Route path="/pokemon/:pokemonName" element={<PokemonDetails/>}/>
+  </Routes>
+</HashRouter>
+  ),
 );
 
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
