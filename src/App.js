@@ -1,6 +1,8 @@
 
 import { useEffect, useState } from "react";
 import PokemonCard from "./Components/PokemonCard";
+import PokemonSearchBar from "./Components/PokemonSearchBar";
+
 
 function App() {
   const [allPokemon, setAllPokemon] = useState([]);
@@ -39,8 +41,11 @@ function App() {
 
   return (
     <div className="app-container">
-          
- 
+           <div>
+      <h1>Pokemon Search</h1>
+      <PokemonSearchBar />
+    </div>
+    
       <h1>Pokedex RE</h1><small>Andy & Alex</small>
       <div className="pokemon-container">
         <div className="all-container">
