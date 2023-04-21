@@ -8,18 +8,18 @@ import { RouterProvider } from 'react-router-dom';
 import Root from './Routes/Root';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
-let router;
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
- router = (
+let router  = (
   <HashRouter>
   <Routes>
     <Route path="/" element={<App />} />
     <Route path="/pokemon/:pokemonName" element={<PokemonDetails/>}/>
   </Routes>
 </HashRouter>
-  ),
+  );
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(router
+
 );
 
 reportWebVitals();
