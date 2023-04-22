@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="app-container" >
       <div>
-        <h1>Search Pokemon:</h1>
+        <h1 class="pokeFont">Search Pokemon:</h1>
         <PokemonSearchBar />
       </div>
 
