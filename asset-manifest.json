@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/pokedex-react/static/css/main.2776caed.css",
-    "main.js": "/pokedex-react/static/js/main.dd937379.js",
+    "main.css": "/pokedex-react/static/css/main.a4677b7b.css",
+    "main.js": "/pokedex-react/static/js/main.6fec9166.js",
     "static/js/787.7303967b.chunk.js": "/pokedex-react/static/js/787.7303967b.chunk.js",
-    "static/media/soulsilver.jpg": "/pokedex-react/static/media/soulsilver.1dc40640cde6abc97cc8.jpg",
     "index.html": "/pokedex-react/index.html",
-    "main.2776caed.css.map": "/pokedex-react/static/css/main.2776caed.css.map",
-    "main.dd937379.js.map": "/pokedex-react/static/js/main.dd937379.js.map",
+    "main.a4677b7b.css.map": "/pokedex-react/static/css/main.a4677b7b.css.map",
+    "main.6fec9166.js.map": "/pokedex-react/static/js/main.6fec9166.js.map",
     "787.7303967b.chunk.js.map": "/pokedex-react/static/js/787.7303967b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2776caed.css",
-    "static/js/main.dd937379.js"
+    "static/css/main.a4677b7b.css",
+    "static/js/main.6fec9166.js"
   ]
 }
