@@ -1,8 +1,7 @@
-
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import PokemonCard from "./Components/PokemonCard";
 import PokemonSearchBar from "./Components/PokemonSearchBar";
-
+<link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet"></link>
 
 function App() {
   const [allPokemon, setAllPokemon] = useState([]);
@@ -40,35 +39,35 @@ function App() {
   }
 
   return (
-    <div className="app-container">
-           <div>
-      <h1>Pokemon Search</h1>
-      <PokemonSearchBar />
-    </div>
-    
-      <h1>Pokedex RE</h1><small>Andy & Alex</small>
+    <div className="app-container" >
+      <div>
+        <h1>Search Pokemon:</h1>
+        <PokemonSearchBar />
+      </div>
+
+      <h1 class="pokeFont">Pokedex RE(act/invented)</h1>
+      <small>Andy & Alex</small>
+
       <div className="pokemon-container">
         <div className="all-container">
-          {allPokemon.map((pokemon,index) => <PokemonCard 
-            id={pokemon.id}
-            name={pokemon.name}
-            image={pokemon.sprites.front_default}
-            type={pokemon.types[0].type.name}
-            key={index}
-          />)}
+          {allPokemon.map((pokemon,index) => {
+            const types = pokemon.types.map(type => type.type.name).join(", ");
+            return (
+              <PokemonCard 
+                id={pokemon.id}
+                name={pokemon.name}
+                image={pokemon.sprites.front_default}
+                types={types}
+                key={index}
+              />
+            );
+          })}
         </div>
         {prevUrl && <button className="load-more" onClick={handlePrevPage}>Previous Page</button>}
         {nextUrl && <button className="load-more" onClick={handleNextPage}>Next Page</button>}
       </div>
     </div>
-
-    
   );
 }
 
 export default App;
-
-
-
-
-

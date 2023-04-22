@@ -8,6 +8,7 @@ import { RouterProvider } from 'react-router-dom';
 import Root from './Routes/Root';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
+
 let router  = (
   <HashRouter>
   <Routes>
