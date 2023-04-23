@@ -1,0 +1,43 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f1f5f8;
+    padding: 2rem;
+  }
+  
+  .about-content {
+    max-width: 50rem;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 4rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+  .header {
+    font-size: 2.5rem;
+    font-weight: bold;
+ 
+  }
+  
+  .paragraph {
+    margin-bottom: 2rem;
+  }
+  
+  .list {
+    margin-bottom: 2rem;
+  }
+  
+  .list-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .list-header {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  

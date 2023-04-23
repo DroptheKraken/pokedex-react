@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import PokemonCard from "./Components/PokemonCard";
+import PokemonCard from "./Components/PokemonCard";import { Link, Outlet } from "react-router-dom"
 import PokemonSearchBar from "./Components/PokemonSearchBar";
 <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet"></link>
+
 
 function App() {
   const [allPokemon, setAllPokemon] = useState([]);
@@ -39,6 +40,13 @@ function App() {
   }
 
   return (
+    <div>
+    <nav>
+    <Link to="/">Home</Link>
+    <Link to="/about">About</Link>
+
+</nav>
+<Outlet />
     <div className="app-container" >
       <div>
         <h1 class="pokeFont">Search Pokemon:</h1>
@@ -46,7 +54,7 @@ function App() {
       </div>
 
       <h1 class="pokeFont">Pokedex RE(act/invented)</h1>
-      <small>Andy & Alex</small>
+      <small>Andy & Alex</small> 
 
       <div className="pokemon-container">
         <div className="all-container">
@@ -66,6 +74,7 @@ function App() {
         {prevUrl && <button className="load-more" onClick={handlePrevPage}>Previous Page</button>}
         {nextUrl && <button className="load-more" onClick={handleNextPage}>Next Page</button>}
       </div>
+    </div>
     </div>
   );
 }

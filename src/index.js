@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 import PokemonDetails from './Components/PokemonDetails';
 import reportWebVitals from './reportWebVitals';
-import { RouterProvider } from 'react-router-dom';
-import Root from './Routes/Root';
+
 import { HashRouter, Route, Routes } from 'react-router-dom';
+import About from './Components/About';
 
 
 let router  = (
@@ -14,6 +14,7 @@ let router  = (
   <Routes>
     <Route path="/" element={<App />} />
     <Route path="/pokemon/:pokemonName" element={<PokemonDetails/>}/>
+    <Route path="/about" element={<About></About>} />
   </Routes>
 </HashRouter>
   );

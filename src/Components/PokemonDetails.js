@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../PokemonDetails.css';
+import { Link, Outlet } from "react-router-dom"
 
- const PokemonDetails = () => {
+const PokemonDetails = () => {
   const { pokemonName } = useParams();
   const [pokemon, setPokemon] = useState(null);
 
@@ -20,18 +21,43 @@ import '../PokemonDetails.css';
     return null;
   }
 
-  const { name, id, abilities, sprites } = pokemon;
+  const { name, id, abilities, sprites, height, weight, stats } = pokemon;
+  const hitPoints = stats.find((stat) => stat.stat.name === 'hp').base_stat;
 
   return (
+<div>
+    <nav>
+    <Link to="/">Home</Link>
+    <Link to="/about">About</Link>
+</nav>
+<Outlet />
     <div className="container">
+          
+
+        
+       <h1 className="header">{name}</h1>
       <div className="details">
-        <h1 className="header">{name}</h1>
+
         <img className="image" src={sprites.front_default} alt={name} />
         <div className="info">
-          <label>ID:</label> {id}
+          <h2>Details:</h2>
+          <ul>
+            <li>
+              <strong>ID:</strong> {id}
+            </li>
+            <li>
+              <strong>Hit Points:</strong> {hitPoints}
+            </li>
+            <li>
+              <strong>Height:</strong> {height / 10}m
+            </li>
+            <li>
+              <strong>Weight:</strong> {weight / 10}kg
+            </li>
+          </ul>
         </div>
-        <div className="abilities">
-          <label>Abilities:</label>
+        <div clasame="abilities">
+          <h2>Abilities:</h2>
           <ul>
             {abilities.map((ability) => (
               <li key={ability.ability.name}>{ability.ability.name}</li>
@@ -40,7 +66,8 @@ import '../PokemonDetails.css';
         </div>
       </div>
     </div>
+    </div>
   );
-  
 };
+
 export default PokemonDetails;
